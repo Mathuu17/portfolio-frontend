@@ -8,7 +8,7 @@ import { AcercaDe } from '../model/acerca-de';
 })
 export class AcercaDeService {
 
-  URL = 'https://backendblackpachamame.onrender.com/acercade/';
+  URL = 'https://frontendlms3.onrender.com/acercade/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'https://backendblackpachamame.onrender.com/educacion/';
+  URL = 'https://frontendlms3.onrender.com/educacion/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  URL = 'https://backendblackpachamame.onrender.com/proyecto/';
+  URL = 'https://frontendlms3.onrender.com/proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  expURL = 'https://backendblackpachamame.onrender.com/explab/';
+  expURL = 'https://frontendlms3.onrender.com/explab/';
 
   constructor(private httpClient: HttpClient) { }
 

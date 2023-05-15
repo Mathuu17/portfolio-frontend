@@ -1,0 +1,52 @@
+<div class="container text-center" *ngIf="educacion">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div
+            class="col-lg-5 col-md-6 col-12 bg-dark text-white text-center rounded border-start border-end border-warning border-2 border-opacity-25 p-5">
+            <h4 class="fw-bold mb-4 text-uppercase">Agregar educación</h4>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="row justify-content-center g-3">
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="img">Imagen</label>
+                    <input type="file" class="form-control" id="img" name="img" (change)="uploadImage($event)"
+                        accept=".jpg, .jpeg, .png, .gif">
+                </div>
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="nombreE">Nombre de la institución</label>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="educacion.nombreE"
+                        required>
+                </div>
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="descripcionE">Descripción del título</label>
+                    <textarea class="form-control" id="descripcionE" name="descripcionE"
+                        [(ngModel)]="educacion.descripcionE" required></textarea>
+                </div>
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="fechaIni">Fecha de inicio</label>
+                    <input type="number" class="form-control" id="fechaIni" name="fechaIni"
+                        [(ngModel)]="educacion.fechaIni" min="2000" max="2023" required>
+                </div>
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="fechaFin">Fecha de finalización</label>
+                    <input type="number" class="form-control" id="fechaFin" name="fechaFin"
+                        [(ngModel)]="educacion.fechaFin" min="2009" max="2023" required>
+                </div>
+                <!-- <div class="p-0 col-12 col-md-10">
+                    <label for="fechaFin" class="form-label">Fecha de finalización</label>
+                    <select class="form-select" aria-label="select fechaFin" id="fechaFin"
+                        [(ngModel)]="educacion.fechaFin" required>
+                        <option selected disabled>Elija un año</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </div> -->
+                <button class="col-12 col-sm-3 btn btn-outline-warning mt-4">Editar</button>
+            </form>
+        </div>
+    </div>
+</div>

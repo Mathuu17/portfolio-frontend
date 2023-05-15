@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div
+            class="col-lg-5 col-md-6 col-12 bg-dark text-white text-center rounded border-start border-end border-danger border-2 border-opacity-25 p-5">
+            <h4 class="fw-bold mb-4 text-uppercase">Login</h4>
+            <p class="text-white-50 mb-3">Ingrese su nombre de usuario y contraseña</p>
+            <form #f="ngForm" (ngSubmit)="onLogin()" class="row justify-content-center g-3" novalidate>
+                <div class="form-floating text-danger col-12 col-md-10 p-0">
+                    <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario"
+                        placeholder="Nombre de usuario" [(ngModel)]="nombreUsuario" required>
+                    <label class="form-label" for="nombreUsuario">Nombre de usuario</label>
+                </div>
+                <div class="form-floating text-danger col-12 col-md-10 p-0">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        [(ngModel)]="password" required />
+                    <label class="form-label" for="password">Password</label>
+                </div>
+                <button type="submit" class="col-12 col-md-6 col-lg-4 btn btn-outline-danger mt-4">Acceder</button>
+            </form>
+        </div>
+    </div>
+</div>

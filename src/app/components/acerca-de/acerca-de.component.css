@@ -1,0 +1,77 @@
+#hello {
+  width: 100%;
+  min-height: 100vh;
+  text-shadow: 0 0.05rem 0.1rem rgb(0 0 0 / 50%);
+  position: relative;
+}
+
+.bg-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../../assets/banner-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.foto-perfil {
+  border-radius: 50%;
+  border: 3px solid rgb(91 175 255);
+  box-shadow: 0 0 20px rgb(91 175 255);
+  z-index: 1;
+  width: 126px;
+  height: 126px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-perfil img {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#hello .title {
+  z-index: 1;
+}
+
+#hello .title p {
+  color: rgb(163, 210, 255);
+  font-size: 24px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+#hello .title p:hover .tooltiptext {
+  visibility: visible;
+  display: inline-block;
+}
+
+#hello .title p .tooltiptext {
+  visibility: hidden;
+  display: none;
+  color: #ffc107;
+}
+
+#acercaDe {
+  position: relative;
+  margin-top: -30px;
+}
+
+.container-acercaDe {
+  background-color: rgb(10 10 12);
+  border: 1px solid rgb(91 175 255);
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgb(91 175 255);
+}
+
+.position-relative > .position-absolute {
+  top: 5px;
+  right: 5px;
+}

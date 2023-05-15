@@ -1,0 +1,30 @@
+<div class="container text-center" *ngIf="proyecto">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div
+            class="col-lg-5 col-md-6 col-12 bg-dark text-white text-center rounded border-start border-end border-warning border-2 border-opacity-25 p-5">
+            <h4 class="fw-bold mb-4 text-uppercase">Editar proyecto</h4>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="row justify-content-center g-3">
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="img">Imagen</label>
+                    <input type="file" class="form-control" id="img" name="img" (change)="uploadImage($event)"
+                        accept=".jpg, .jpeg, .png, .gif">
+                </div>
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="proyecto.nombre"
+                        required>
+                </div>
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="descripcion">Descripción</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="proyecto.descripcion" required></textarea>
+                </div>
+                <div class="col-12 col-md-10 p-0">
+                    <label class="form-label" for="link">Link</label>
+                    <input type="text" class="form-control" id="link" name="link" [(ngModel)]="proyecto.link" required>
+                </div>
+                <button type="submit" class="col-12 col-sm-3 btn btn-outline-warning mt-4">Editar</button>
+            </form>
+        </div>
+    </div>
+</div>
